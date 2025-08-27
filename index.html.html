@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Анна | Веб-дизайнер</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background: #f8f9fa;
+      color: #212529;
+      line-height: 1.6;
+    }
+    header {
+      background: url('https://via.placeholder.com/1920x600') center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: -1;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .btn {
+      padding: 12px 30px;
+      background: #6c63ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      background: #5a52d5;
+    }
+    section {
+      padding: 80px 10%;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2.2rem;
+      color: #333;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .project {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .project:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    .project img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .project-info {
+      padding: 15px;
+    }
+    .project-info h3 {
+      margin-bottom: 8px;
+      color: #333;
+    }
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: #212529;
+      color: white;
+    }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.5rem; }
+      section { padding: 60px 5%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Главная -->
+  <header id="home">
+    <h1>Анна Петрова</h1>
+    <p>Веб-дизайнер | UX/UI | Создаю сайты, которые продают</p>
+    <a href="#portfolio" class="btn">Смотреть работы</a>
+  </header>
+
+  <!-- Портфолио -->
+  <section id="portfolio">
+    <h2>Мои проекты</h2>
+    <div class="portfolio-grid">
+      <div class="project">
+        <img src="https://via.placeholder.com/400x200" alt="Проект 1" />
+        <div class="project-info">
+          <h3>Интернет-магазин кофе</h3>
+          <p>UI/UX, адаптивный дизайн, Figma</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/400x200" alt="Проект 2" />
+        <div class="project-info">
+          <h3>Сайт студии дизайна</h3>
+          <p>Брендинг, визуал, анимации</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/400x200" alt="Проект 3" />
+        <div class="project-info">
+          <h3>Приложение для тренировок</h3>
+          <p>UX-исследования, прототипирование</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Обо мне -->
+  <section id="about" style="background: white;">
+    <h2>Обо мне</h2>
+    <p style="max-width: 800px; margin: 0 auto; text-align: center;">
+      Я веб-дизайнер с 4-летним опытом. Создаю удобные, красивые и эффективные интерфейсы. 
+      Работаю с Figma, Adobe XD, понимаю основы HTML/CSS. Люблю простоту, ясность и внимание к деталям.
+    </p>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contact">
+    <h2>Связаться со мной</h2>
+    <p style="text-align: center; margin-bottom: 20px;">
+      <a href="mailto:hello@anna.design" class="btn">Написать на email</a>
+    </p>
+    <p style="text-align: center;">
+      <a href="https://t.me/anna_design" target="_blank">Telegram</a> | 
+      <a href="https://dribbble.com/anna" target="_blank">Dribbble</a> | 
+      <a href="https://behance.net/anna" target="_blank">Behance</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Анна Петрова. Все права защищены.</p>
+  </footer>
+
+</body>
+</html>
